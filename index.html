@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balls website</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 5rem;
+            margin: 1rem 0;
+        }
+        .impact {
+            width: 90vw;
+            --stroke-width: 2px;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            color: white;
+            /* text-shadow:
+                calc(-1 * var(--stroke-width)) calc(-1 * var(--stroke-width))  0 black,
+                calc(-1 * var(--stroke-width)) var(--stroke-width) 0 black,
+                var(--stroke-width) calc(-1 * var(--stroke-width)) 0 black,
+                var(--stroke-width) var(--stroke-width) 0 black; */
+            -webkit-text-stroke: 2px black;
+            border-radius: 1rem;
+            transition: background-color .1s;
+        }
+        .impact:hover {
+            background-color: #fff4;
+        }
+        .impact:focus, .impact:active {
+            background-color: #0004;
+            outline: none;
+            border: none;
+        }
+        .impact.top, .impact.bottom {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+        }
+        .impact.top { top: 2rem; }
+        .impact.bottom { bottom: 2rem; }
+
+        #meme-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -100;
+        }
+
+        #upload-image {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="file"] {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="impact top" contenteditable="" spellcheck="false">fuck it</h1>
+    <h1 class="impact bottom" contenteditable="" spellcheck="false">no image</h1>
+    <img src="" alt="" id="meme-img">
+    <input id="upload-image" type="file" name="upload-image" accept="image/jpeg image/jpg image/png image/webp">
+
+    <script>
+        document.getElementById('upload-image').addEventListener('change', function() {
+            const reader = new FileReader();
+            reader.addEventListener('load', () => {
+                const uploaded_image = reader.result;
+                memeImg = document.getElementById('meme-img').src = uploaded_image;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+    </script>
+</body>
+</html>
