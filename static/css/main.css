@@ -272,6 +272,6 @@ footer p {
     text-shadow: 0 0 8px #000;
 }
 
-#pride-triangle.hide svg {
+#pride-flag.hide svg {
     transform: scale(0);
 }

@@ -52,11 +52,11 @@ function toggle_ui() {
     if (ui_enabled) {
         document.querySelector('#controls').classList.remove('hide');
         document.querySelector('footer').classList.remove('hide');
-        document.querySelector('#pride-triangle').classList.remove('hide');
+        document.querySelector('#pride-flag').classList.remove('hide');
     } else {
         document.querySelector('#controls').classList.add('hide');
         document.querySelector('footer').classList.add('hide');
-        document.querySelector('#pride-triangle').classList.add('hide');
+        document.querySelector('#pride-flag').classList.add('hide');
     }
 }
 
