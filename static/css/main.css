@@ -4,6 +4,21 @@ body {
     padding: 0;
     overflow: hidden;
     background: #111;
+    background-image: url('/img/noimage.png');
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    animation: background-slide 5s linear infinite;
+}
+
+@keyframes background-slide {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 100px 100px;
+    }
 }
 
 main {
@@ -28,6 +43,11 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    pointer-events: none;
+}
+
+#text-container * {
+    pointer-events: all;
 }
 
 .impact {
@@ -74,24 +94,6 @@ h1 {
 
 #meme-img.stretch {
     background-size: 100% 100%;
-}
-
-#meme-img:not([style^="background-image"]) {
-    background-image: url('/img/noimage.png');
-    background-size: 100px 100px;
-    background-repeat: repeat;
-    image-rendering: pixelated;
-    animation: background-slide 5s linear infinite;
-}
-
-@keyframes background-slide {
-    from {
-        background-position: 0px 0px;
-    }
-
-    to {
-        background-position: 100px 100px;
-    }
 }
 
 #controls {
