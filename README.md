@@ -15,7 +15,7 @@ a fun little utility site for making impact font memes. bring your TOP TEXT BOTT
 
 welcome to the beginning of it all!
 
-first off, you're likely to notice the control panel at the bottom-left of the screen. this one!
+you're likely to notice the control panel at the bottom-left of the screen. this one!
 
 ![control panel](/guide/controls.png)
 
@@ -27,9 +27,9 @@ if you're not sure what these buttons do, fret not! let's cover them now:
 - **GitHub**: no need to worry this button- you're already here!
 - **mellodoot**: that's me! this button takes you to [my website](https://www.mellodoot.com).
 
-if the automatic image fits aren't quite to your liking, my best advice is to resize your browser window until the image is just as you like it! quite a patchwork solution i know, but it's the best i've got for now!
+if you're not a fan of UI all up in your face, you can disable it! simply hit `H` on your keyboard to toggle it.
 
-if you know your way around your browser's development tools, you can also use responsive mode to get the exact screen size you want :)
+if the automatic image fits aren't quite to your liking, my best advice is to resize your browser window until the image is just as you like it! quite a patchwork solution i know, but it's the best i've got for now! if you know your way around your browser's development tools, you can also use responsive mode to get the exact screen size you want :)
 
 ## missing features / todo 🫥
 
