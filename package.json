@@ -1,0 +1,28 @@
+{
+	"name": "impact-meme-generator",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js"
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"./static/*"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mellodoot/impact-meme-generator.git"
+	},
+	"author": "mellodoot",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mellodoot/impact-meme-generator/issues"
+	},
+	"homepage": "https://github.com/mellodoot/impact-meme-generator#readme",
+	"dependencies": {
+		"express": "^4.18.2"
+	}
+}

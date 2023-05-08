@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMPACT MEME GENERATOR</title>
+
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="/js/index.js" type="text/javascript" defer></script>
+    <script src="https://www.mellodoot.com/js/pridetriangle.js" type="text/javascript" defer=""></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <main>
+        <img src="" alt="" id="meme-img" class="stretch">
+        <div id="text-container">
+            <h1 class="impact" contenteditable="" spellcheck="false">top text</h1>
+            <h1 class="impact" contenteditable="" spellcheck="false">bottom text</h1>
+        </div>
+    </main>
+    <div id="controls">
+        <label for="upload-image" title="Upload Image"><img src="/img/upload.svg" alt="upload image"></label>
+        <input id="upload-image" type="file" name="upload-image" accept="image/jpeg image/jpg image/png image/webp"
+            hidden>
+
+        <button id="change-fit" title="Change Image Fit (Stretch)"><img src="/img/fit-stretch.svg"
+                alt="change image fit (stretch)"></button>
+
+        <button id="take-screenshot" title="Take Screenshot"><img src="/img/screenshot.svg"
+                alt="take screenshot"></button>
+
+        <!-- there is no help :3 -->
+        <!-- <button id="get-help" title="Help"><img src="/img/what.svg" alt="help"></button> -->
+
+        <a href="https://www.github.com/mellodoot/impact-meme-generator" target="_blank" id="github" title="GitHub"><img
+                src="/img/github-mark.svg" alt="github logo"></a>
+
+        <a href="https://www.mellodoot.com" target="_blank" id="mellodotcom" title="made with &#10084; by mellodoot!"><img
+                src="/img/mellosmile.svg" alt="mellodoot icon"></a>
+    </div>
+    <footer>
+        <p>IMPACT MEME GENERATOR</p>
+        <p>made with &#10084; by mellodoot, 2023</p>
+        <p>press 'H' to hide UI!</p>
+    </footer>
+</body>
+
+</html>
