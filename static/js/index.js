@@ -5,14 +5,25 @@ let screenshot_button = document.getElementById('take-screenshot');
 
 let flash_enabled = true;
 let ui_enabled = true;
+let toggle_ui_enabled = true;
 
 const image_constraints = [ 'cover', 'contain', 'stretch' ];
 let current_fit = meme_img.classList.item(0);
 
+/**
+ * changes the background image to one of the user's choosing!
+ * @param {string} url a link to the image!
+ */
 function set_image(url) {
     meme_img.style.backgroundImage = `url(${url})`;
 }
 
+/**
+ * changes the `background-size` attribute to any of the three
+ * available parameters: `cover`, `contain` and `stretch`!
+ * 
+ * also updates any relevant buttons.
+ */
 function change_fit() {
     fit_button.classList.add('active');
     setTimeout(() => {
@@ -32,6 +43,9 @@ function change_fit() {
     fit_button.title = `Change Image Fit (${current_fit.replace(/(^.)/g, match => match.toUpperCase())})`;
 }
 
+/**
+ * toggles the ui! pretty self-explanatory.
+ */
 function toggle_ui() {
     ui_enabled = !ui_enabled;
     if (ui_enabled) {
@@ -45,6 +59,9 @@ function toggle_ui() {
     }
 }
 
+/**
+ * uses html2canvas to take a screenshot! only captures the image and caption text.
+ */
 function screenshot() {
     html2canvas(document.querySelector('main'), {
         logging: false,
@@ -72,6 +89,9 @@ function screenshot() {
     });
 }
 
+/**
+ * sends all currently visible screenshot previews packing!
+ */
 function clear_screenshots() {
     const screenshots = document.querySelectorAll('#screenshot');
     screenshots.forEach(screenshot => {
@@ -82,6 +102,9 @@ function clear_screenshots() {
     });
 }
 
+/**
+ * creates a camera flash effect (useful for screenshots!)
+ */
 function flash() {
     let flashbox = document.createElement('div');
     flashbox.id = "flash";
@@ -110,5 +133,18 @@ upload_button.addEventListener('change', () => {
 // TOGGLE UI BIND
 
 document.addEventListener('keydown', (event) => {
-    if (event.key == 'h') toggle_ui();
+    if (event.key != 'h') return;
+    if (!toggle_ui_enabled) return;
+    toggle_ui();
+});
+
+// DON'T TOGGLE IF THE USER IS TYPING!
+
+document.querySelectorAll('.impact').forEach(text => {
+    text.addEventListener('focus', () => {
+        toggle_ui_enabled = false;
+    });
+    text.addEventListener('focusout', () => {
+        toggle_ui_enabled = true;
+    });
 });
