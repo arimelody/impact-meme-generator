@@ -1,0 +1,5 @@
+node_modules/
+guide/
+.gitignore
+*.code-workspace
+README.md

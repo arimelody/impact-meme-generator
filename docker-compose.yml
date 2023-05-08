@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    image: mellodoot/impact-meme-generator
+    container_name: impactmeme
+    ports:
+      - 443:443
+    restart: unless-stopped
