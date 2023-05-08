@@ -1,5 +1,3 @@
-# IMPACT MEME GENERATOR
-
 ![IMPACT MEME GENERATOR](/guide/title.png)
 
 a fun little utility site for making impact font memes. bring your TOP TEXT BOTTOM TEXT dreams to life!
