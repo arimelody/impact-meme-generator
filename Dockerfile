@@ -1,4 +1,4 @@
-FROM node:18-alpine3.17
+FROM node:21-alpine3.18
 
 # create app directory
 WORKDIR /usr/src/app
@@ -11,7 +11,7 @@ RUN npm ci --only=production
 COPY . .
 
 # expose port
-EXPOSE 443
+EXPOSE 8080
 
 # run command
 CMD [ "npm", "run", "start" ]
