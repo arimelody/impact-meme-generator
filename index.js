@@ -1,14 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
+const http = require('http');
 const express = require('express');
 const app = express();
 
-const PORT = 443;
-const options = {
-    cert: fs.readFileSync('./certs/mellodoot.pem'),
-    key: fs.readFileSync('./certs/mellodoot.key')
-}
+const PORT = 8080;
 
 app.use(express.json());
 
@@ -18,6 +14,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './static/index.html'));
 });
 
-https.createServer(options, app).listen(PORT, () => {
-    console.log(`https server now running on https://localhost:${PORT} !`);
+http.createServer(app).listen(PORT, () => {
+    console.log(`http server now running on http://localhost:${PORT}`);
 });
