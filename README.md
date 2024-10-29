@@ -25,7 +25,7 @@ if you're not sure what these buttons do, fret not! let's cover them now:
 - **Change Image Fit**: by default, any images uploaded will *stretch* to meet each corner of your screen. this may be what you want, or it might not! click this button to pick from any of the three available fit options: `stretch`, `cover` and `contain`!
 - **Take Screenshot**: satisfied with your work? go ahead and save it! we make use of the handy [html2canvas](https://html2canvas.hertzen.com/) library to screenshot only the text and background image, then chuck it into a little photo thumbnail in the corner for you to click on. this will open your image in a new tab so you can save and call it official!
 - **GitHub**: no need to worry this button- you're already here!
-- **mellodoot**: that's me! this button takes you to [my website](https://www.mellodoot.com).
+- **ari melody**: that's me! this button takes you to [my website](https://arimelody.me).
 
 if you're not a fan of UI all up in your face, you can disable it! simply hit `H` on your keyboard to toggle it.
 
